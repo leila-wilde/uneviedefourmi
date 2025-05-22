@@ -7,12 +7,13 @@ using namespace std;
 
 int main() {
 
-    string filename = "fourmiliere_zero.txt";
+    string filename = "./fourmilieres/fourmiliere_zero.txt";
     ifstream input;
 
     input.open(filename);
 
-    if(input.is_open()) {
+    if(!input.is_open()) {
+        cerr << "Error opening file: " << filename << endl;
         return 1;
     }
 
@@ -32,3 +33,4 @@ int main() {
     return 0;
     
 }
+
